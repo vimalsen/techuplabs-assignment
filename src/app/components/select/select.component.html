@@ -1,0 +1,12 @@
+<ngx-select
+  [items]="items"
+  [multiple]="multiple"
+  [optionValueField]="optionValueField"
+  [optionTextField]="optionTextField"
+  formControlName="controlName"
+  [keepSelectMenuOpened]="keepSelectMenuOpened"
+  [allowClear]="allowClear"
+  [keepSelectedItems]="keepSelectedItems"
+  (selectionChanges)="onChange($event)"
+  (open)="openSelect()"
+></ngx-select>

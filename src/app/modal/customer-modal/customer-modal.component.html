@@ -1,0 +1,92 @@
+<!-- Modal -->
+<form
+  class="modal fade"
+  id="addCustomersModal"
+  tabindex="-1"
+  aria-labelledby="addCustomersModalLabel"
+  aria-hidden="true"
+  [formGroup]="customerFormGroup"
+  (ngSubmit)="onSubmitForm()"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Create Customer</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="close()"
+        ></button>
+      </div>
+      <div class="modal-body py-0">
+        <div class="mb-3 row">
+          <label for="title" class="col-sm-2 col-form-label"
+            >Title<sup>*</sup></label
+          >
+          <div class="col-sm-10">
+            <input
+              id="title"
+              class="form-control"
+              type="text"
+              aria-label="default input example"
+              formControlName="title"
+            />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="staticEmail" class="col-sm-2 col-form-label"
+            >Email<sup>*</sup></label
+          >
+          <div class="col-sm-10">
+            <input
+              type="email"
+              class="form-control"
+              id="staticEmail"
+              formControlName="email"
+            />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-2 col-form-label">Region<sup>*</sup></label>
+          <div class="col-sm-10">
+            <app-select
+              [items]="region"
+              [multiple]="false"
+              controlName="region"
+              [keepSelectMenuOpened]="false"
+              [keepSelectedItems]="false"
+              (open)="open()"
+              [allowClear]="false"
+              (selectedOptions)="selectedOptions($event)"
+            ></app-select>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-2 col-form-label">Country<sup>*</sup></label>
+          <div class="col-sm-10">
+            <app-select
+              [items]="countries"
+              [multiple]="false"
+              controlName="country"
+              [keepSelectMenuOpened]="false"
+              [allowClear]="false"
+              [keepSelectedItems]="false"
+              (selectedOptions)="selectedOptions($event)"
+            ></app-select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer border-0 mx-auto">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="customerFormGroup.invalid"
+        >
+          Create Customer
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

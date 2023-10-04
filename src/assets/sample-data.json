@@ -1,0 +1,60 @@
+{
+  "pin": [
+    {
+      "title": "Pin 1",
+      "image": "",
+      "collaborators": ["Customer 1", "Customer 2"],
+      "privacy": "Public"
+    },
+    {
+      "title": "Pin 2",
+      "image": "",
+      "collaborators": ["Customer 2", "Customer 3"],
+      "privacy": "Public"
+    },
+    {
+      "title": "Pin 3",
+      "image": "",
+      "collaborators": ["Customer 1", "Customer 2"],
+      "privacy": "Public"
+    },
+    {
+      "title": "Pin 4",
+      "image": "",
+      "collaborators": ["Customer 4", "Customer 5"],
+      "privacy": "Public"
+    }
+  ],
+  "customers": [
+    {
+      "title": "Customer 1",
+      "email": "jajjajd@as",
+      "region": "Antarctic",
+      "country": "Bouvet Island"
+    },
+    {
+      "title": "Customer 2",
+      "email": "seen@jja",
+      "region": "Asia",
+      "country": "Armenia"
+    },
+    {
+      "title": "Customer 3",
+      "email": "vimal@goals191.ai",
+      "region": "Asia",
+      "country": "Afghanistan"
+    },
+    {
+      "title": "Customer 4",
+      "email": "vhiay@asd",
+      "region": "Asia",
+      "country": "Bangladesh"
+    },
+    {
+      "title": "Customer 5",
+      "email": "asda@ads",
+      "region": "Antarctic",
+      "country": "French Southern Territories (the)"
+    }
+  ]
+}

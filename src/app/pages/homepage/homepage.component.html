@@ -1,0 +1,71 @@
+<section>
+  <div class="row justify-content-center m-2">
+    <div class="col-12 col-md-8">
+      <div class="row justify-content-end mb-3">
+        <div class="col-auto">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="addCustomersModal"
+            data-bs-target="#addCustomersModal"
+            (click)="showAddCustomerModal()"
+          >
+            + Add Customer
+          </button>
+        </div>
+      </div>
+      <div class="row justify-content-between mb-3">
+        <div class="col-auto align-self-end">List of Pins</div>
+        <div class="col-auto">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="addPinsModal"
+            data-bs-target="#addPinsModal"
+            (click)="showAddPinModal()"
+          >
+            + Add Pin
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <table class="table table-bordered text-center">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Image</th>
+                <th scope="col">Collaboratory</th>
+                <th scope="col">Privacy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let pin of pinsData">
+                <td class="align-middle">{{ pin.title | titlecase }}</td>
+                <td class="align-middle">
+                  <img
+                    width="50"
+                    height="50"
+                    src="{{
+                      pin.image ? pin.image : '/assets/images/elephant.jpeg'
+                    }}"
+                  />
+                </td>
+                <td class="align-middle">
+                  <div *ngFor="let collaborator of pin.collaborators">
+                    {{ collaborator }}
+                  </div>
+                </td>
+                <td class="align-middle">{{ pin.privacy | titlecase }}</td>
+              </tr>
+              <tr></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-customer-modal (onSubmit)="closeModal()"></app-customer-modal>
+<app-pins-modal (onSubmit)="closeModal()"></app-pins-modal>

@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+.ngx-select__toggle {
+  border-color: #dee2e6 !important;
+}
+
+.form-check-inline {
+  display: inline-flex !important;
+}
+
+.btn-primary.disabled {
+  cursor: not-allowed !important;
+}
+
+.btn.btn-primary[disabled] {
+  background-color: #e6e6e6;
+  color: #767676;
+  border: 1px solid #8f8f8f;
+  cursor: pointer;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}

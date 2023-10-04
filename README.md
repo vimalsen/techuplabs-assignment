@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+-> Create a project using ng new command for this project
+-> Created four folders inside the app folder in the project.
+-> Components folder will have all the shared components inside it.
+-> Have created two shared components for now (select component and file upload component).
+-> Modal have all the modal components inside the folder.
+-> Pages will have the page level components.
+-> Services folder will have all the services required in the application.
+-> I have tried calling your given api in the services but that was throwing CORS error.
+-> Then I picked the data from the api stores it in a JSON file in asset folder.
+-> Called that JSON file from the services.
+-> Now i have created two modals for create pin and create customer modal.
+-> Storing the default data into the localStorage
+-> Cleared the data on onSubmit or clear button.
+-> Showing the responsiveness.
